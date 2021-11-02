@@ -5,22 +5,22 @@ This repository was created to accelerate [AppStream 2.0 Elastic Fleet](LINK.com
 ### Script Steps
 
 **Parameters**
-- installSize
+- **installSize**
     This is the size the VHDX should be. The size should always be larger than the install of your application. 
-- vhdName
+- **vhdName**
     This is what you would like to name your VHDX file. This name will be used as identifier. 
-- vhdLocation
+- **vhdLocation**
     The local path that the VHDX file will be saved. This is not a mandatory parameter. If not provided, a folder will be created under $env:TEMP
     that matches vhdName. If the folder path matching vhdName already exists, it will create a new random folder (vhdName + random int).
-- vhdMountLetter
+- **vhdMountLetter**
     The drive letter you would like to mount the VHDX to. This is not a mandatory parameter. If not provided, the script will automatically 
     find an open drive letter assuming no mount path has been provided. If both a mount letter and mount path are not provided, the mount letter will be prioritized and a random open drive letter will be found.
-- vhdMountPath
+- **vhdMountPath**
     Specifies the mount path you would like to mount the VHDX to. This is not a mandatory parameter. If both a mount letter and mount path are provided, the mount letter will be prioritized.
-- vhdS3Bucket
+- **vhdS3Bucket**
     Specifies the S3 location where you would like to store the VHDX file. Note, if you do not have versioning enabled on the bucket, each file named the same will
     be overwritten.
-- force
+- **force**
     Boolean parameter that allows your vhdMountPath to be created. If the path is not already created, the script will exit with no verified destination. If you 
     set -force $true, the supplied path will be created.
 
