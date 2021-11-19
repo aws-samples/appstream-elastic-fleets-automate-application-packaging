@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script will install Chrome and package it on a VHD
+# This script will install Chrome and package it on a VHD to be used on AppStream 2.0 Elastic fleets.
 MountPath="/mnt/ChromeVHD/"
 AppName="Chrome"
 dd if=/dev/zero of=$AppName.img bs=1G count=1
